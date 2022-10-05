@@ -1,0 +1,68 @@
+.card {
+  background-color: #FAFAFA;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  border-radius: 3rem;
+}
+
+.TodoItem-p {
+  width: calc(100% - 120px);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  flex: 1;
+  color: var(--clr-gb-2);
+}
+
+.TodoItem-p:hover {
+  color: var(--clr-gb-1);
+}
+
+.TodoItem-p--complete {
+  text-decoration: line-through;
+}
+
+.Icon {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  width: 28px;
+  font-size: 24px;
+  font-weight: bold;    
+}
+
+.Icon-check {
+  left: 12px;
+}
+.Icon-check--active {
+  color: var(--clr-blue);
+}
+
+.Icon-delete {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+.Icon-delete:hover {
+  color: red;
+}
+
+/* CLEAR CONTAINER */
+
+.clear {
+cursor: pointer;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.5s ease;
+}
+
+.card:hover .clear {
+opacity: 1;
+pointer-events: all;
+}
